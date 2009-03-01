@@ -1,0 +1,26 @@
+/* The same as in prefs panel. */
+"Ions number (%d)" = "Numero ioni (%d)";
+"Size (%d)" = "Dimensione (%d)";
+"Emitters (%d)" = "Emettitori (%d)";
+"Attracters (%d)" = "Attrattori (%d)";
+"Speed (%d)" = "Velocità (%d)";
+"Camera Speed (%d)" = "Velocità Camera (%d)";
+"Blur (%d)" = "Blur (%d)";
+"Surface" = "Superficie";
+"Wireframe" = "Fil di ferro";
+"Complexity (%d)" = "Complessità (%d)";
+
+/* Standard strings. */
+"Main monitor only" = "Solo monitor principale";
+"Check updates" = "Controlla versione";
+"Default values" = "Valori di default";
+"Cancel" = "Cancella";
+"Save" = "Salva";
+
+/* version checking strings. */
+"Couldn't connect to version database, sorry" = "Non posso connettermi al database, peccato";
+"New version available !!" = "C'è una nuova versione !!";
+"You're up-to-date" = "Hai già l'ultima versione";
+
+
+

@@ -1,0 +1,45 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {
+                "closeSheet_cancel" = id; 
+                "closeSheet_save" = id; 
+                restoreDefaults = id; 
+                "sheet_update" = id; 
+            }; 
+            CLASS = HeliosView; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                IBCancel = id; 
+                IBDefaultValues = id; 
+                IBSave = id; 
+                IBUpdatesInfo = id; 
+                IBcomplexity = id; 
+                IBcomplexityTxt = id; 
+                IBdAttracters = id; 
+                IBdAttractersTxt = id; 
+                IBdBlur = id; 
+                IBdBlurTxt = id; 
+                IBdCameraspeed = id; 
+                IBdCameraspeedTxt = id; 
+                IBdEmitters = id; 
+                IBdEmittersTxt = id; 
+                IBdIons = id; 
+                IBdIonsTxt = id; 
+                IBdSize = id; 
+                IBdSizeTxt = id; 
+                IBdSpeed = id; 
+                IBdSpeedTxt = id; 
+                IBdSurface = id; 
+                IBmainMonitorOnly = id; 
+                IBsphereType = id; 
+                IBversionNumberField = id; 
+                configureSheet = id; 
+            }; 
+            SUPERCLASS = ScreenSaverView; 
+        }, 
+        {CLASS = ScreenSaverView; LANGUAGE = ObjC; SUPERCLASS = NSView; }
+    ); 
+    IBVersion = 1; 
+}

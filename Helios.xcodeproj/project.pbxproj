@@ -1,0 +1,369 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E0D079C30996912E00B2C3F4 /* HeliosView.h in Headers */ = {isa = PBXBuildFile; fileRef = 01528F51007D13077F000001 /* HeliosView.h */; };
+		E0D079C40996912E00B2C3F4 /* impCrawlPoint.h in Headers */ = {isa = PBXBuildFile; fileRef = F5F1419A033A929801A80102 /* impCrawlPoint.h */; };
+		E0D079C50996912E00B2C3F4 /* impCube.h in Headers */ = {isa = PBXBuildFile; fileRef = F5F1419C033A929801A80102 /* impCube.h */; };
+		E0D079C60996912E00B2C3F4 /* impCubeTable.h in Headers */ = {isa = PBXBuildFile; fileRef = F5F1419D033A929801A80102 /* impCubeTable.h */; };
+		E0D079C70996912E00B2C3F4 /* impCubeVolume.h in Headers */ = {isa = PBXBuildFile; fileRef = F5F1419F033A929801A80102 /* impCubeVolume.h */; };
+		E0D079C80996912E00B2C3F4 /* impElement.h in Headers */ = {isa = PBXBuildFile; fileRef = F5F141A0033A929801A80102 /* impElement.h */; };
+		E0D079C90996912E00B2C3F4 /* impSphere.h in Headers */ = {isa = PBXBuildFile; fileRef = F5F141A1033A929801A80102 /* impSphere.h */; };
+		E0D079CA0996912E00B2C3F4 /* impSurface.h in Headers */ = {isa = PBXBuildFile; fileRef = F5F141A2033A929801A80102 /* impSurface.h */; };
+		E0D079CB0996912E00B2C3F4 /* rsDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = F5F141A5033A929801A80102 /* rsDefines.h */; };
+		E0D079CC0996912E00B2C3F4 /* rsMath.h in Headers */ = {isa = PBXBuildFile; fileRef = F5F141A6033A929801A80102 /* rsMath.h */; };
+		E0D079CD0996912E00B2C3F4 /* rsRand.h in Headers */ = {isa = PBXBuildFile; fileRef = F5F141A7033A929801A80102 /* rsRand.h */; };
+		E0D079CF0996912E00B2C3F4 /* Helios.nib in Resources */ = {isa = PBXBuildFile; fileRef = F5F14196033A929801A80102 /* Helios.nib */; };
+		E0D079D00996912E00B2C3F4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F5F141D2033A92FE01A80102 /* Localizable.strings */; };
+		E0D079D10996912E00B2C3F4 /* spheremap.tga in Resources */ = {isa = PBXBuildFile; fileRef = F5F141DC033A93E701A80102 /* spheremap.tga */; };
+		E0D079D20996912E00B2C3F4 /* aaron_map.tga in Resources */ = {isa = PBXBuildFile; fileRef = A13524D903E6055600A80102 /* aaron_map.tga */; };
+		E0D079D40996912E00B2C3F4 /* HeliosView.mm in Sources */ = {isa = PBXBuildFile; fileRef = F5F14197033A929801A80102 /* HeliosView.mm */; };
+		E0D079D50996912E00B2C3F4 /* impCube.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F5F1419B033A929801A80102 /* impCube.cpp */; };
+		E0D079D60996912E00B2C3F4 /* impCubeVolume.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F5F1419E033A929801A80102 /* impCubeVolume.cpp */; };
+		E0D079D80996912E00B2C3F4 /* ScreenSaver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0149AE530075FC557F000001 /* ScreenSaver.framework */; };
+		E0D079D90996912E00B2C3F4 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5F141DE033A93F901A80102 /* OpenGL.framework */; };
+		E0D079DA0996912E00B2C3F4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5F141F1033A941801A80102 /* Foundation.framework */; };
+		E0D079DB0996912E00B2C3F4 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5F14367033A942D01A80102 /* AppKit.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0149AE530075FC557F000001 /* ScreenSaver.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ScreenSaver.framework; path = /System/Library/Frameworks/ScreenSaver.framework; sourceTree = "<absolute>"; };
+		01528F51007D13077F000001 /* HeliosView.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = HeliosView.h; sourceTree = SOURCE_ROOT; };
+		A13524D903E6055600A80102 /* aaron_map.tga */ = {isa = PBXFileReference; lastKnownFileType = file; path = aaron_map.tga; sourceTree = "<group>"; };
+		E03232790ADF3EB3000E52E6 /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Japanese; path = Japanese.lproj/Localizable.strings; sourceTree = "<group>"; };
+		E0D079E10996912E00B2C3F4 /* Info-Helios.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-Helios.plist"; sourceTree = "<group>"; };
+		E0D079E20996912E00B2C3F4 /* Helios.saver */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Helios.saver; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5F14196033A929801A80102 /* Helios.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; path = Helios.nib; sourceTree = "<group>"; };
+		F5F14197033A929801A80102 /* HeliosView.mm */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.objcpp; path = HeliosView.mm; sourceTree = "<group>"; };
+		F5F1419A033A929801A80102 /* impCrawlPoint.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = impCrawlPoint.h; sourceTree = "<group>"; };
+		F5F1419B033A929801A80102 /* impCube.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = impCube.cpp; sourceTree = "<group>"; };
+		F5F1419C033A929801A80102 /* impCube.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = impCube.h; sourceTree = "<group>"; };
+		F5F1419D033A929801A80102 /* impCubeTable.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = impCubeTable.h; sourceTree = "<group>"; };
+		F5F1419E033A929801A80102 /* impCubeVolume.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = impCubeVolume.cpp; sourceTree = "<group>"; };
+		F5F1419F033A929801A80102 /* impCubeVolume.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = impCubeVolume.h; sourceTree = "<group>"; };
+		F5F141A0033A929801A80102 /* impElement.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = impElement.h; sourceTree = "<group>"; };
+		F5F141A1033A929801A80102 /* impSphere.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = impSphere.h; sourceTree = "<group>"; };
+		F5F141A2033A929801A80102 /* impSurface.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = impSurface.h; sourceTree = "<group>"; };
+		F5F141A5033A929801A80102 /* rsDefines.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = rsDefines.h; sourceTree = "<group>"; };
+		F5F141A6033A929801A80102 /* rsMath.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = rsMath.h; sourceTree = "<group>"; };
+		F5F141A7033A929801A80102 /* rsRand.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = rsRand.h; sourceTree = "<group>"; };
+		F5F141D3033A92FE01A80102 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/Localizable.strings; sourceTree = "<group>"; };
+		F5F141D5033A930B01A80102 /* French */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = French; path = French.lproj/Localizable.strings; sourceTree = "<group>"; };
+		F5F141D6033A931201A80102 /* German */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = German; path = German.lproj/Localizable.strings; sourceTree = "<group>"; };
+		F5F141D7033A931801A80102 /* Italian */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = Italian; path = Italian.lproj/Localizable.strings; sourceTree = "<group>"; };
+		F5F141DC033A93E701A80102 /* spheremap.tga */ = {isa = PBXFileReference; lastKnownFileType = file; path = spheremap.tga; sourceTree = "<group>"; };
+		F5F141DE033A93F901A80102 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = /System/Library/Frameworks/OpenGL.framework; sourceTree = "<absolute>"; };
+		F5F141F1033A941801A80102 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		F5F14367033A942D01A80102 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E0D079D70996912E00B2C3F4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E0D079D80996912E00B2C3F4 /* ScreenSaver.framework in Frameworks */,
+				E0D079D90996912E00B2C3F4 /* OpenGL.framework in Frameworks */,
+				E0D079DA0996912E00B2C3F4 /* Foundation.framework in Frameworks */,
+				E0D079DB0996912E00B2C3F4 /* AppKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0149AE500075FABC7F000001 = {
+			isa = PBXGroup;
+			children = (
+				01528F51007D13077F000001 /* HeliosView.h */,
+				F5F14197033A929801A80102 /* HeliosView.mm */,
+				F5F14198033A929801A80102 /* Implicit */,
+				F5F141A3033A929801A80102 /* rsMath */,
+				F5F141DB033A93C701A80102 /* Resources */,
+				0149AE520075FC557F000001 /* Frameworks */,
+				0149AE580075FD537F000001 /* Products */,
+				E0D079E10996912E00B2C3F4 /* Info-Helios.plist */,
+			);
+			sourceTree = "<group>";
+		};
+		0149AE520075FC557F000001 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0149AE530075FC557F000001 /* ScreenSaver.framework */,
+				F5F141DE033A93F901A80102 /* OpenGL.framework */,
+				F5F141F1033A941801A80102 /* Foundation.framework */,
+				F5F14367033A942D01A80102 /* AppKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0149AE580075FD537F000001 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E0D079E20996912E00B2C3F4 /* Helios.saver */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F5F14198033A929801A80102 /* Implicit */ = {
+			isa = PBXGroup;
+			children = (
+				F5F1419A033A929801A80102 /* impCrawlPoint.h */,
+				F5F1419B033A929801A80102 /* impCube.cpp */,
+				F5F1419C033A929801A80102 /* impCube.h */,
+				F5F1419D033A929801A80102 /* impCubeTable.h */,
+				F5F1419E033A929801A80102 /* impCubeVolume.cpp */,
+				F5F1419F033A929801A80102 /* impCubeVolume.h */,
+				F5F141A0033A929801A80102 /* impElement.h */,
+				F5F141A1033A929801A80102 /* impSphere.h */,
+				F5F141A2033A929801A80102 /* impSurface.h */,
+			);
+			path = Implicit;
+			sourceTree = "<group>";
+		};
+		F5F141A3033A929801A80102 /* rsMath */ = {
+			isa = PBXGroup;
+			children = (
+				F5F141A5033A929801A80102 /* rsDefines.h */,
+				F5F141A6033A929801A80102 /* rsMath.h */,
+				F5F141A7033A929801A80102 /* rsRand.h */,
+			);
+			path = rsMath;
+			sourceTree = "<group>";
+		};
+		F5F141DB033A93C701A80102 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F5F14196033A929801A80102 /* Helios.nib */,
+				F5F141D2033A92FE01A80102 /* Localizable.strings */,
+				F5F141DC033A93E701A80102 /* spheremap.tga */,
+				A13524D903E6055600A80102 /* aaron_map.tga */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		E0D079C20996912E00B2C3F4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E0D079C30996912E00B2C3F4 /* HeliosView.h in Headers */,
+				E0D079C40996912E00B2C3F4 /* impCrawlPoint.h in Headers */,
+				E0D079C50996912E00B2C3F4 /* impCube.h in Headers */,
+				E0D079C60996912E00B2C3F4 /* impCubeTable.h in Headers */,
+				E0D079C70996912E00B2C3F4 /* impCubeVolume.h in Headers */,
+				E0D079C80996912E00B2C3F4 /* impElement.h in Headers */,
+				E0D079C90996912E00B2C3F4 /* impSphere.h in Headers */,
+				E0D079CA0996912E00B2C3F4 /* impSurface.h in Headers */,
+				E0D079CB0996912E00B2C3F4 /* rsDefines.h in Headers */,
+				E0D079CC0996912E00B2C3F4 /* rsMath.h in Headers */,
+				E0D079CD0996912E00B2C3F4 /* rsRand.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		E0D079C10996912E00B2C3F4 /* Helios */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E0D079DD0996912E00B2C3F4 /* Build configuration list for PBXNativeTarget "Helios" */;
+			buildPhases = (
+				E0D079C20996912E00B2C3F4 /* Headers */,
+				E0D079CE0996912E00B2C3F4 /* Resources */,
+				E0D079D30996912E00B2C3F4 /* Sources */,
+				E0D079D70996912E00B2C3F4 /* Frameworks */,
+				E0D079DC0996912E00B2C3F4 /* Rez */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Helios;
+			productInstallPath = "$(USER_LIBRARY_DIR)/Bundles";
+			productName = Helios;
+			productReference = E0D079E20996912E00B2C3F4 /* Helios.saver */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0149AE4F0075FABC7F000001 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = E0D079BD099690F100B2C3F4 /* Build configuration list for PBXProject "Helios" */;
+			compatibilityVersion = "Xcode 2.4";
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+				Italian,
+			);
+			mainGroup = 0149AE500075FABC7F000001;
+			productRefGroup = 0149AE580075FD537F000001 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E0D079C10996912E00B2C3F4 /* Helios */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E0D079CE0996912E00B2C3F4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E0D079CF0996912E00B2C3F4 /* Helios.nib in Resources */,
+				E0D079D00996912E00B2C3F4 /* Localizable.strings in Resources */,
+				E0D079D10996912E00B2C3F4 /* spheremap.tga in Resources */,
+				E0D079D20996912E00B2C3F4 /* aaron_map.tga in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXRezBuildPhase section */
+		E0D079DC0996912E00B2C3F4 /* Rez */ = {
+			isa = PBXRezBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXRezBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E0D079D30996912E00B2C3F4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E0D079D40996912E00B2C3F4 /* HeliosView.mm in Sources */,
+				E0D079D50996912E00B2C3F4 /* impCube.cpp in Sources */,
+				E0D079D60996912E00B2C3F4 /* impCubeVolume.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F5F141D2033A92FE01A80102 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F5F141D3033A92FE01A80102 /* English */,
+				F5F141D5033A930B01A80102 /* French */,
+				F5F141D6033A931201A80102 /* German */,
+				F5F141D7033A931801A80102 /* Italian */,
+				E03232790ADF3EB3000E52E6 /* Japanese */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E0D079BE099690F100B2C3F4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Debug;
+		};
+		E0D079BF099690F100B2C3F4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Release;
+		};
+		E0D079DE0996912E00B2C3F4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INFOPLIST_FILE = "Info-Helios.plist";
+				OTHER_CFLAGS = "";
+				OTHER_CPLUSPLUSFLAGS = (
+					"$(OTHER_CFLAGS)",
+					"-fpermissive",
+				);
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = Helios;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = saver;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		E0D079DF0996912E00B2C3F4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				INFOPLIST_FILE = "Info-Helios.plist";
+				OTHER_CFLAGS = "";
+				OTHER_CPLUSPLUSFLAGS = (
+					"$(OTHER_CFLAGS)",
+					"-fpermissive",
+				);
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = Helios;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = saver;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E0D079BD099690F100B2C3F4 /* Build configuration list for PBXProject "Helios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E0D079BE099690F100B2C3F4 /* Debug */,
+				E0D079BF099690F100B2C3F4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E0D079DD0996912E00B2C3F4 /* Build configuration list for PBXNativeTarget "Helios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E0D079DE0996912E00B2C3F4 /* Debug */,
+				E0D079DF0996912E00B2C3F4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0149AE4F0075FABC7F000001 /* Project object */;
+}
