@@ -80,9 +80,9 @@ public:
     rsVec targetpos;
 
     inline emitter()  {
-        pos = rsVec(float(random()) / LONG_MAX * 1000.0f - 500.0f,
-                    float(random()) / LONG_MAX * 1000.0f - 500.0f,
-                    float(random()) / LONG_MAX * 1000.0f - 500.0f);
+        pos = rsVec(float(random()) / INT_MAX * 1000.0f - 500.0f,
+                    float(random()) / INT_MAX * 1000.0f - 500.0f,
+                    float(random()) / INT_MAX * 1000.0f - 500.0f);
     };
     // inline ~emitter() {};
     inline void settargetpos(rsVec target) {oldpos = pos; targetpos = target;};
@@ -96,9 +96,9 @@ public:
     rsVec targetpos;
 
     inline attracter() {
-        pos = rsVec(float(random()) / LONG_MAX * 1000.0f - 500.0f,
-                    float(random()) / LONG_MAX * 1000.0f - 500.0f,
-                    float(random()) / LONG_MAX * 1000.0f - 500.0f);
+        pos = rsVec(float(random()) / INT_MAX * 1000.0f - 500.0f,
+                    float(random()) / INT_MAX * 1000.0f - 500.0f,
+                    float(random()) / INT_MAX * 1000.0f - 500.0f);
     };
     // inline ~attracter() {};
     inline void settargetpos(rsVec target){oldpos = pos; targetpos = target;};

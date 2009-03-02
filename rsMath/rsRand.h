@@ -29,11 +29,11 @@
 // Useful random number macros
 // Don't forget to initialize with srand()
 inline int myRandi(int x) {
-	return(random() % x);
+	return(int(random()) % x);
 }
 
 inline float myRandf(float x) {
-	return(float(random()) / LONG_MAX * x);
+	return(float(random()) / INT_MAX * x);
 }
 
 

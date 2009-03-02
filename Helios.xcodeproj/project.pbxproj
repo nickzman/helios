@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 42;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -272,7 +272,23 @@
 		E0D079BE099690F100B2C3F4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+				ARCHS = (
+					i386,
+					ppc,
+					x86_64,
+				);
+				"GCC_ENABLE_OBJC_GC[arch=x86_64]" = supported;
+				GCC_FAST_OBJC_DISPATCH = NO;
+				"GCC_VERSION[sdk=macosx10.4][arch=*]" = 4.0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				"MACOSX_DEPLOYMENT_TARGET[arch=i386]" = 10.4;
+				"MACOSX_DEPLOYMENT_TARGET[arch=ppc]" = 10.3;
+				"MACOSX_DEPLOYMENT_TARGET[arch=x86_64]" = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				"SDKROOT[arch=i386]" = macosx10.4;
+				"SDKROOT[arch=ppc]" = macosx10.4;
+				"SDKROOT[arch=x86_64]" = macosx10.6;
+				WARNING_CFLAGS = "-Wmost";
 			};
 			name = Debug;
 		};
@@ -280,10 +296,22 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = (
-					ppc,
 					i386,
+					ppc,
+					x86_64,
 				);
-				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+				"GCC_ENABLE_OBJC_GC[arch=x86_64]" = supported;
+				GCC_FAST_OBJC_DISPATCH = NO;
+				"GCC_VERSION[sdk=macosx10.4][arch=*]" = 4.0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				"MACOSX_DEPLOYMENT_TARGET[arch=i386]" = 10.4;
+				"MACOSX_DEPLOYMENT_TARGET[arch=ppc]" = 10.3;
+				"MACOSX_DEPLOYMENT_TARGET[arch=x86_64]" = 10.6;
+				ONLY_ACTIVE_ARCH = NO;
+				"SDKROOT[arch=i386]" = macosx10.4;
+				"SDKROOT[arch=ppc]" = macosx10.4;
+				"SDKROOT[arch=x86_64]" = macosx10.6;
+				WARNING_CFLAGS = "-Wmost";
 			};
 			name = Release;
 		};

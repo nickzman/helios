@@ -28,7 +28,7 @@
 #include <list>
 
 #include <math.h>
-#include <fstream.h>
+#include <fstream>
 
 
 
@@ -905,7 +905,7 @@ std::list<cubelistelem>::iterator iter = cubelist.end();
         pos[2] -= 0.01f;
         nz = function(pos) - no;
         // then normalize
-        no = 1.0f / sqrt(nx * nx + ny * ny + nz * nz);
+        no = 1.0f / sqrtf(nx * nx + ny * ny + nz * nz);
         edges[axis][x][y][z].data[0] = nx * no;
         edges[axis][x][y][z].data[1] = ny * no;
         edges[axis][x][y][z].data[2] = nz * no;

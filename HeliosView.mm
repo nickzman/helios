@@ -108,17 +108,17 @@ static void hsl2rgb(float h, float s, float l, float *r, float *g, float *b);
     version   = [defaults stringForKey:@"version"];
     mainMonitorOnly = [defaults boolForKey:@"mainMonitorOnly"];
 
-    par.dIons = [defaults integerForKey:@"dIons"];
-    par.dSize = [defaults integerForKey:@"dSize"];
-    par.dEmitters = [defaults integerForKey:@"dEmitters"];
-    par.dAttracters = [defaults integerForKey:@"dAttracters"];
-    par.dSpeed = [defaults integerForKey:@"dSpeed"];
-    par.dCameraspeed = [defaults integerForKey:@"dCameraspeed"];
+    par.dIons = int([defaults integerForKey:@"dIons"]);
+    par.dSize = int([defaults integerForKey:@"dSize"]);
+    par.dEmitters = int([defaults integerForKey:@"dEmitters"]);
+    par.dAttracters = int([defaults integerForKey:@"dAttracters"]);
+    par.dSpeed = int([defaults integerForKey:@"dSpeed"]);
+    par.dCameraspeed = int([defaults integerForKey:@"dCameraspeed"]);
     par.dSurface = [defaults boolForKey:@"dSurface"];
     // par.dWireframe = [defaults boolForKey:@"dWireframe"];
-    par.dBlur = [defaults integerForKey:@"dBlur"];
-    sphereType = [defaults integerForKey:@"sphereType"];
-    complexity = [defaults integerForKey:@"complexity"];
+    par.dBlur = int([defaults integerForKey:@"dBlur"]);
+    sphereType = int([defaults integerForKey:@"sphereType"]);
+    complexity = int([defaults integerForKey:@"complexity"]);
     
     if( ![version isEqualToString:kVersion] || (version == NULL) ) {
         // first time ever !! 
@@ -151,8 +151,8 @@ static void hsl2rgb(float h, float s, float l, float *r, float *g, float *b);
         complexity = k_complexity;
     }
     
-    windowWidth = [self bounds].size.width;
-    windowHeight = [self bounds].size.height;
+    windowWidth = float([self bounds].size.width);
+    windowHeight = float([self bounds].size.height);
     
     thisScreenIsOn = TRUE;
     initialized = NO;
@@ -211,7 +211,7 @@ static void hsl2rgb(float h, float s, float l, float *r, float *g, float *b);
 {
     // Do your animation initialization here
     NSOpenGLContext *context;
-	long interval = 1;
+	GLint interval = 1;
     int mainScreen;
     int thisScreen;
     
@@ -231,7 +231,7 @@ static void hsl2rgb(float h, float s, float l, float *r, float *g, float *b);
 
     context = [_view openGLContext];
     [context makeCurrentContext];
-    glClearColor(0.0, 0.0, 0.0, 1.0);
+    glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     glFlush();
 	CGLSetParameter(CGLGetCurrentContext(), kCGLCPSwapInterval, &interval);	// don't allow screen tearing
@@ -403,7 +403,7 @@ static void hsl2rgb(float h, float s, float l, float *r, float *g, float *b);
     par.dSurface = ( [IBdSurface state] == NSOnState ) ? true : false;
     // par.dWireframe = ( [IBdWireframe state] == NSOnState ) ? true : false;
     par.dBlur = [IBdBlur intValue];
-    sphereType = [IBsphereType indexOfSelectedItem];
+    sphereType = int([IBsphereType indexOfSelectedItem]);
     complexity = [IBcomplexity intValue];
 
     
@@ -682,16 +682,16 @@ static void hsl2rgb(float h, float s, float l, float *r, float *g, float *b);
             change = PIx2 / (par.dEmitters);
             for(i=0; i<par.dEmitters; i++){
                 angle += change;
-                cosangle = cos(angle) * 200.0f;
-                sinangle = sin(angle) * 200.0f;
+                cosangle = cosf(angle) * 200.0f;
+                sinangle = sinf(angle) * 200.0f;
                 par.elist[i].settargetpos(rsVec(rsVec(cosangle, sinangle, 0.0f)));
             }
             angle = 1.5f;
             change = PIx2 / float(par.dAttracters);
             for(i=0; i<par.dAttracters; i++){
                 angle += change;
-                cosangle = cos(angle) * 500.0f;
-                sinangle = sin(angle) * 500.0f;
+                cosangle = cosf(angle) * 500.0f;
+                sinangle = sinf(angle) * 500.0f;
                 par.alist[i].settargetpos(rsVec(rsVec(cosangle, sinangle, 0.0f)));
             }
             break;
@@ -701,14 +701,14 @@ static void hsl2rgb(float h, float s, float l, float *r, float *g, float *b);
             change = PIx2 / float(par.dEmitters + par.dAttracters);
             for(i=0; i<par.dEmitters; i++){
                 angle += change;
-                cosangle = cos(angle) * 500.0f;
-                sinangle = sin(angle) * 500.0f;
+                cosangle = cosf(angle) * 500.0f;
+                sinangle = sinf(angle) * 500.0f;
                 par.elist[i].settargetpos(rsVec(rsVec(cosangle, sinangle, 0.0f)));
             }
             for(i=0; i<par.dAttracters; i++){
                 angle += change;
-                cosangle = cos(angle) * 500.0f;
-                sinangle = sin(angle) * 500.0f;
+                cosangle = cosf(angle) * 500.0f;
+                sinangle = sinf(angle) * 500.0f;
                 par.alist[i].settargetpos(rsVec(rsVec(cosangle, sinangle, 0.0f)));
             }
             break;
@@ -720,15 +720,15 @@ static void hsl2rgb(float h, float s, float l, float *r, float *g, float *b);
                 change = PIx2 / float(par.dAttracters * 2);
             angle = 0.5f;
             for(i=0; i<par.dEmitters; i++){
-                cosangle = cos(angle) * 500.0f;
-                sinangle = sin(angle) * 500.0f;
+                cosangle = cosf(angle) * 500.0f;
+                sinangle = sinf(angle) * 500.0f;
                 par.elist[i].settargetpos(rsVec(rsVec(cosangle, sinangle, 0.0f)));
                 angle += change * 2.0f;
             }
             angle = 0.5f + change;
             for(i=0; i<par.dAttracters; i++){
-                cosangle = cos(angle) * 500.0f;
-                sinangle = sin(angle) * 500.0f;
+                cosangle = cosf(angle) * 500.0f;
+                sinangle = sinf(angle) * 500.0f;
                 par.alist[i].settargetpos(rsVec(rsVec(cosangle, sinangle, 0.0f)));
                 angle += change * 2.0f;
             }
@@ -762,7 +762,7 @@ static void hsl2rgb(float h, float s, float l, float *r, float *g, float *b);
     float surfaceColor[4] = {0.0f, 0.0f, 0.0f, 1.0f};
 
     preCameraInterp += par.dCameraspeed * par.elapsedTime * 0.01f;
-    cameraInterp = 0.5f - (0.5f * cos(preCameraInterp));
+    cameraInterp = 0.5f - (0.5f * cosf(preCameraInterp));
     cameraDistance = (1.0f - cameraInterp) * oldCameraDistance + cameraInterp * targetCameraDistance;
     if(preCameraInterp >= PI) {
         oldCameraDistance = targetCameraDistance;
@@ -770,7 +770,7 @@ static void hsl2rgb(float h, float s, float l, float *r, float *g, float *b);
         preCameraInterp = 0.0f;
     }
     glLoadIdentity();
-    glTranslatef(0.0, 0.0, cameraDistance);
+    glTranslatef(0.0f, 0.0f, cameraDistance);
 
     // then do rotation
     rsVec radialVelDiff = targetRadialVel - radialVel;
@@ -847,7 +847,7 @@ static void hsl2rgb(float h, float s, float l, float *r, float *g, float *b);
     wait -= par.elapsedTime;
     if(wait <= 0.0f){
         preinterp += par.elapsedTime * float(par.dSpeed) * interpconst;
-        interp = 0.5f - (0.5f * cos(preinterp));
+        interp = 0.5f - (0.5f * cosf(preinterp));
     }
     if(preinterp >= PI){
         // select new taget points (not the same pattern twice in a row)
@@ -891,7 +891,7 @@ std::list<impCrawlPoint> crawlpointlist;
         }
         par.surface->reset();
         valuetrig += par.elapsedTime;
-        par.volume->surfacevalue = 0.45f + 0.05f * cos(valuetrig);
+        par.volume->surfacevalue = 0.45f + 0.05f * cosf(valuetrig);
         par.volume->make_surface(crawlpointlist);
     }
     
@@ -901,7 +901,7 @@ std::list<impCrawlPoint> crawlpointlist;
         glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
         // glAlphaFunc(GL_ALWAYS, 1);
         // glBlendFunc(GL_ONE, GL_ONE_MINUS_SRC_ALPHA);
-        glColor4f(0.0f, 0.0f, 0.0f, 0.5f - sqrt(sqrt(par.dBlur)) * 0.150208);
+        glColor4f(0.0f, 0.0f, 0.0f, 0.5f - sqrtf(sqrtf(par.dBlur)) * 0.150208f);
         glPushMatrix();
         glLoadIdentity();
         glBegin(GL_TRIANGLE_STRIP);
@@ -992,11 +992,11 @@ std::list<impCrawlPoint> crawlpointlist;
     float sphereScaleFactor;
     char thePath[16384+1];
     
-    srandom(time(NULL));
+    srandom(unsigned(time(NULL)));
 
-    par.newRgb[0] = 1;
-    par.newRgb[1] = 0.5;
-    par.newRgb[2] = 0;
+    par.newRgb[0] = 1.0f;
+    par.newRgb[1] = 0.5f;
+    par.newRgb[2] = 0.0f;
     
     /****** DrawAll internals */
     ionsReleased = 0;
@@ -1124,7 +1124,7 @@ std::list<impCrawlPoint> crawlpointlist;
             delete par.volume;
             par.volume = 0;
         }
-        par.volume = new impCubeVolume(50, 50, 50, 70.0-0.35*complexity);
+        par.volume = new impCubeVolume(50, 50, 50, 70.0f-0.35f*complexity);
         // par.volume->init(50, 50, 50, 35.0f);
         par.volume->spheres = par.spheres;
         par.volume->num = par.dEmitters+par.dAttracters;
@@ -1218,7 +1218,7 @@ ion::ion(myParameters* p) {
     float temp;
 
     pos = rsVec(0.0f, 0.0f, 0.0f);
-    rgb[0] = rgb[1] = rgb[2] = 1.0;
+    rgb[0] = rgb[1] = rgb[2] = 1.0f;
     temp = myRandf(2.0f) + 0.4f;
     size = float(p->dSize) * temp;
     speed = float(p->dSpeed) * 12.0f / temp;
@@ -1359,10 +1359,10 @@ static void hsl2rgb(float h, float s, float l, float *r, float *g, float *b)
     theColor = [NSColor colorWithCalibratedHue: h
                                     saturation: s
                                     brightness: l
-                                         alpha: 1.0 ];
-    *r = [theColor redComponent];
-    *g = [theColor greenComponent];
-    *b = [theColor blueComponent];
+                                         alpha: 1.0f ];
+    *r = float([theColor redComponent]);
+    *g = float([theColor greenComponent]);
+    *b = float([theColor blueComponent]);
 
     return;
 }

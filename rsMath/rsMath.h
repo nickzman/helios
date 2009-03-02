@@ -124,11 +124,11 @@ public:
         }
         else{
             a *= 0.5f;
-            float sintheta = sin(a);
+            float sintheta = sinf(a);
             q[0] = sintheta * x;
             q[1] = sintheta * y;
             q[2] = sintheta * z;
-            q[3] = cos(a);
+            q[3] = cosf(a);
         }
     };	// angle, axis
     void make(float a, const rsVec &v){
@@ -140,11 +140,11 @@ public:
         }
         else{
             a *= 0.5f;
-            float sintheta = sin(a);
+            float sintheta = sinf(a);
             q[0] = sintheta * v[0];
             q[1] = sintheta * v[1];
             q[2] = sintheta * v[2];
-            q[3] = cos(a);
+            q[3] = cosf(a);
         }
     };
     void normalize(){
@@ -280,13 +280,13 @@ public:
     void fromEuler(float yaw, float pitch, float roll){
         float cy, cp, cr, sy, sp, sr, cpcy, spsy;
 
-        cy = cos(yaw * 0.5f);
-        cp = cos(pitch * 0.5f);
-        cr = cos(roll * 0.5f);
+        cy = cosf(yaw * 0.5f);
+        cp = cosf(pitch * 0.5f);
+        cr = cosf(roll * 0.5f);
 
-        sy = sin(yaw * 0.5f);
-        sp = sin(pitch * 0.5f);
-        sr = sin(roll * 0.5f);
+        sy = sinf(yaw * 0.5f);
+        sp = sinf(pitch * 0.5f);
+        sr = sinf(roll * 0.5f);
 
         cpcy = cp * cy;
         spsy = sp * sy;
