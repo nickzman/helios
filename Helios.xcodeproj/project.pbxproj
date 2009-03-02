@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 45;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -197,7 +197,7 @@
 		0149AE4F0075FABC7F000001 /* Project object */ = {
 			isa = PBXProject;
 			buildConfigurationList = E0D079BD099690F100B2C3F4 /* Build configuration list for PBXProject "Helios" */;
-			compatibilityVersion = "Xcode 2.4";
+			compatibilityVersion = "Xcode 3.1";
 			hasScannedForEncodings = 1;
 			knownRegions = (
 				English,
