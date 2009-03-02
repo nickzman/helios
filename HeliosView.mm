@@ -54,6 +54,17 @@
 #define k_sphereType		k_original
 #define k_complexity		70
 
+#ifdef __ppc__
+@implementation NSString (HeliosBC)
+
+- (BOOL)getCString:(char *)cString maxLength:(unsigned)length encoding:(NSStringEncoding)encoding
+{
+	return CFStringGetCString((CFStringRef)self, cString, length, CFStringConvertNSStringEncodingToEncoding(encoding));
+}
+
+@end
+#endif
+
 
 // #define LOG_DEBUG
 static void hsl2rgb(float h, float s, float l, float *r, float *g, float *b);
@@ -1033,9 +1044,9 @@ std::list<impCrawlPoint> crawlpointlist;
     else {
         // Init sphere texture
         if( sphereType == k_original )
-            [[[NSBundle bundleForClass:[HeliosView class]] pathForResource:@"spheremap" ofType:@"tga"] getCString:thePath maxLength:16384];
+            [[[NSBundle bundleForClass:[HeliosView class]] pathForResource:@"spheremap" ofType:@"tga"] getCString:thePath maxLength:16384 encoding:NSUTF8StringEncoding];
         else // if( sphereType == k_aaron )
-            [[[NSBundle bundleForClass:[HeliosView class]] pathForResource:@"aaron_map" ofType:@"tga"] getCString:thePath maxLength:16384];
+            [[[NSBundle bundleForClass:[HeliosView class]] pathForResource:@"aaron_map" ofType:@"tga"] getCString:thePath maxLength:16384 encoding:NSUTF8StringEncoding];
 
         if( ![self LoadTGA:thePath] ) {
             par.dSurface = FALSE;
