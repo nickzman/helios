@@ -109,9 +109,10 @@ public:
 
 class ion: public particle{
 public:
-    float speed;
+    float speed = 0.0f;
 
-    inline ion(myParameters* p);
+    inline ion();
+    inline void init(myParameters* p);
     inline void start(myParameters* p);
     inline void update(myParameters* p);
     inline void draw(myParameters* p);

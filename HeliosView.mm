@@ -1104,7 +1104,11 @@ std::list<impCrawlPoint> crawlpointlist;
         delete[] par.ilist;
         par.ilist = 0;
     }
-    par.ilist = new ion[par.dIons](&par);
+    par.ilist = new ion[par.dIons]();
+    for(size_t ilist_idx = 0; ilist_idx < par.dIons; ++ilist_idx)
+    {
+        par.ilist[ilist_idx].init(&par);
+    }
 
     // Initialize surface
     if(par.dSurface){
@@ -1213,9 +1217,10 @@ std::list<impCrawlPoint> crawlpointlist;
 @end
 
 
-
-ion::ion(myParameters* p) {
-    float temp;
+ion::ion() {}
+void ion::init(myParameters* p)
+{
+    float temp = 0.0f;
 
     pos = rsVec(0.0f, 0.0f, 0.0f);
     rgb[0] = rgb[1] = rgb[2] = 1.0f;
