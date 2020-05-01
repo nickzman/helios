@@ -196,10 +196,14 @@
 /* Begin PBXProject section */
 		0149AE4F0075FABC7F000001 /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+			};
 			buildConfigurationList = E0D079BD099690F100B2C3F4 /* Build configuration list for PBXProject "Helios" */;
 			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = en;
 			hasScannedForEncodings = 1;
 			knownRegions = (
+				en,
 				English,
 				Japanese,
 				French,
@@ -318,12 +322,19 @@
 		E0D079DE0996912E00B2C3F4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CLANG_CXX_LIBRARY = "libc++";
 				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1.51;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				"GCC_VERSION[sdk=macosx10.4][arch=*]" = "";
 				INFOPLIST_FILE = "Info-Helios.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.51;
 				OTHER_CFLAGS = "";
 				OTHER_CPLUSPLUSFLAGS = (
 					"$(OTHER_CFLAGS)",
@@ -346,7 +357,11 @@
 		E0D079DF0996912E00B2C3F4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CLANG_CXX_LIBRARY = "libc++";
 				COPY_PHASE_STRIP = YES;
+				CURRENT_PROJECT_VERSION = 1.51;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				"GCC_AUTO_VECTORIZATION[arch=i386]" = YES;
 				"GCC_AUTO_VECTORIZATION[arch=x86_64]" = YES;
@@ -354,7 +369,10 @@
 				GCC_FAST_MATH = YES;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_OPTIMIZATION_LEVEL = 3;
+				"GCC_VERSION[sdk=macosx10.4][arch=*]" = "";
 				INFOPLIST_FILE = "Info-Helios.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.51;
 				OTHER_CFLAGS = "";
 				OTHER_CPLUSPLUSFLAGS = (
 					"$(OTHER_CFLAGS)",
