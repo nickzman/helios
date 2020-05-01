@@ -111,6 +111,7 @@ class ion: public particle{
 public:
     float speed;
 
+    inline ion();
     inline ion(myParameters* p);
     inline void start(myParameters* p);
     inline void update(myParameters* p);
