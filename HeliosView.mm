@@ -1104,7 +1104,14 @@ std::list<impCrawlPoint> crawlpointlist;
         delete[] par.ilist;
         par.ilist = 0;
     }
-    par.ilist = new ion[par.dIons](&par);
+    par.ilist = new ion[par.dIons];
+    for (int i = 0; i < par.dIons; ++i)
+    {
+        //Do not allocate memory,
+        //initialize an object in memory address provided by the pointer
+        new (&(par.ilist[i])) ion(&par);
+    }
+
 
     // Initialize surface
     if(par.dSurface){
@@ -1213,6 +1220,7 @@ std::list<impCrawlPoint> crawlpointlist;
 @end
 
 
+ion::ion() {}
 
 ion::ion(myParameters* p) {
     float temp;
@@ -1366,4 +1374,3 @@ static void hsl2rgb(float h, float s, float l, float *r, float *g, float *b)
 
     return;
 }
-
