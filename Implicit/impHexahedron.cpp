@@ -19,31 +19,25 @@
  */
 
 
-#ifndef IMPCRAWLPOINT_H
-#define IMPCRAWLPOINT_H
+#include "impHexahedron.h"
+#include "impShape.h"
 
 
 
-#include <vector>
+float impHexahedron::value(float* position){
+	const float& x(position[0]);
+	const float& y(position[1]);
+	const float& z(position[2]);
 
+	const float tx(x * invtrmat[0] + y * invtrmat[1] + z * invtrmat[2] + invtrmat[3]);
+	const float ty(x * invtrmat[4] + y * invtrmat[5] + z * invtrmat[6] + invtrmat[7]);
+	const float tz(x * invtrmat[8] + y * invtrmat[9] + z * invtrmat[10] + invtrmat[11]);
 
-
-// For making a list of starting points for surface crawling.
-class impCrawlPoint{
-public:
-    float position[3];
-    
-    impCrawlPoint(){};
-    impCrawlPoint(float x, float y, float z){position[0] = x; position[1] = y; position[2] = z;};
-    impCrawlPoint(float* p){position[0] = p[0]; position[1] = p[1]; position[2] = p[2];};
-	~impCrawlPoint(){};
-	void set(float x, float y, float z){position[0] = x; position[1] = y; position[2] = z;};
-    void set(float* p){position[0] = p[0]; position[1] = p[1]; position[2] = p[2];};
-};
-
-
-typedef std::vector<impCrawlPoint> impCrawlPointVector;
-
-
-
-#endif
+	const float xx(1.0f / (tx * tx + IMP_MIN_DIVISOR));
+	const float yy(1.0f / (ty * ty + IMP_MIN_DIVISOR));
+	const float zz(1.0f / (tz * tz + IMP_MIN_DIVISOR));
+	if(xx < yy)
+		return (xx < zz) ? xx : zz;
+	else
+		return (yy < zz) ? yy : zz;
+}

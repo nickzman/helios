@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2001-2010  Terence M. Welsh
+ * Copyright (C) 2010  Terence M. Welsh
  *
  * This file is part of Implicit.
  *
@@ -19,31 +19,25 @@
  */
 
 
-#ifndef IMPCRAWLPOINT_H
-#define IMPCRAWLPOINT_H
+#ifndef IMPCAPSULE_H
+#define IMPCAPSULE_H
 
 
-
-#include <vector>
-
+#include "impShape.h"
 
 
-// For making a list of starting points for surface crawling.
-class impCrawlPoint{
+// An impCapsule is defined as the inverse square falloff from a segment.
+class impCapsule : public impShape{
+	float length;  // dimension on z-axis
+
 public:
-    float position[3];
-    
-    impCrawlPoint(){};
-    impCrawlPoint(float x, float y, float z){position[0] = x; position[1] = y; position[2] = z;};
-    impCrawlPoint(float* p){position[0] = p[0]; position[1] = p[1]; position[2] = p[2];};
-	~impCrawlPoint(){};
-	void set(float x, float y, float z){position[0] = x; position[1] = y; position[2] = z;};
-    void set(float* p){position[0] = p[0]; position[1] = p[1]; position[2] = p[2];};
+	impCapsule(){
+		length = 1.0f;
+	};
+	~impCapsule(){};
+	void setLength(float l){ length = l; }
+	virtual float value(float* position);
 };
-
-
-typedef std::vector<impCrawlPoint> impCrawlPointVector;
-
 
 
 #endif

@@ -19,31 +19,16 @@
  */
 
 
-#ifndef IMPCRAWLPOINT_H
-#define IMPCRAWLPOINT_H
+#include "impSphere.h"
+#include "impShape.h"
 
 
-
-#include <vector>
-
-
-
-// For making a list of starting points for surface crawling.
-class impCrawlPoint{
-public:
-    float position[3];
-    
-    impCrawlPoint(){};
-    impCrawlPoint(float x, float y, float z){position[0] = x; position[1] = y; position[2] = z;};
-    impCrawlPoint(float* p){position[0] = p[0]; position[1] = p[1]; position[2] = p[2];};
-	~impCrawlPoint(){};
-	void set(float x, float y, float z){position[0] = x; position[1] = y; position[2] = z;};
-    void set(float* p){position[0] = p[0]; position[1] = p[1]; position[2] = p[2];};
-};
-
-
-typedef std::vector<impCrawlPoint> impCrawlPointVector;
-
-
-
-#endif
+float impSphere::value(float* position){
+	const float tx(invmat[12] + position[0]);
+	const float ty(invmat[13] + position[1]);
+	const float tz(invmat[14] + position[2]);
+	// Use thickness instead of relying on scale to be in the matrix
+	// because the value computation for a sphere is simplified by
+	// using an incomplete matrix.
+	return thicknessSquared / (tx*tx + ty*ty + tz*tz + IMP_MIN_DIVISOR);
+}

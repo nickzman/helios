@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2001-2010  Terence M. Welsh
+ * Copyright (C) 2010  Terence M. Welsh
  *
  * This file is part of Implicit.
  *
@@ -19,30 +19,28 @@
  */
 
 
-#ifndef IMPCRAWLPOINT_H
-#define IMPCRAWLPOINT_H
+#ifndef IMPROUNDEDHEXAHEDRON_H
+#define IMPROUNDEDHEXAHEDRON_H
 
 
 
-#include <vector>
+#include "impShape.h"
 
 
 
-// For making a list of starting points for surface crawling.
-class impCrawlPoint{
+// An impRoundedHexahedron is a rectangular solid with rounded corners.
+// It is defined as the inverse square falloff from a rectangular solid.
+class impRoundedHexahedron : public impShape{
+	float width, height, length;  // dimension on x-, y-, and z-axes
+
 public:
-    float position[3];
-    
-    impCrawlPoint(){};
-    impCrawlPoint(float x, float y, float z){position[0] = x; position[1] = y; position[2] = z;};
-    impCrawlPoint(float* p){position[0] = p[0]; position[1] = p[1]; position[2] = p[2];};
-	~impCrawlPoint(){};
-	void set(float x, float y, float z){position[0] = x; position[1] = y; position[2] = z;};
-    void set(float* p){position[0] = p[0]; position[1] = p[1]; position[2] = p[2];};
+	impRoundedHexahedron(){
+		width = height = length = 1.0f;
+	};
+	~impRoundedHexahedron(){};
+	void setSize(float w, float h, float l){ width = w; height = h; length = l; }
+	virtual float value(float* position);
 };
-
-
-typedef std::vector<impCrawlPoint> impCrawlPointVector;
 
 
 

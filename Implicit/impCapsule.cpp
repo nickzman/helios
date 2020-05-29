@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2001-2010  Terence M. Welsh
+ * Copyright (C) 2010  Terence M. Welsh
  *
  * This file is part of Implicit.
  *
@@ -19,22 +19,25 @@
  */
 
 
-#ifndef IMPSPHERE_H
-#define IMPSPHERE_H
-
-
-
+#include "impCapsule.h"
 #include "impShape.h"
 
 
+float impCapsule::value(float* position){
+	const float& x(position[0]);
+	const float& y(position[1]);
+	const float& z(position[2]);
 
-class impSphere : public impShape{
-public:
-	impSphere(){};
-    ~impSphere(){};
-    virtual float value(float* position);
-};
+	const float tx(x * invtrmat[0] + y * invtrmat[1] + z * invtrmat[2] + invtrmat[3]);
+	const float ty(x * invtrmat[4] + y * invtrmat[5] + z * invtrmat[6] + invtrmat[7]);
+	const float tz(x * invtrmat[8] + y * invtrmat[9] + z * invtrmat[10] + invtrmat[11]);
 
+	// Compute shrunken value.
+	// Use 0.001 instead of 0.0 to avoid divide-by-zero.
+	const float zz(fabsf(tz) - length);
+	//const float sz((zz < 0.001f) ? 0.001f : zz);
+	// rewritten with fewer conditionals
+	const float sz(zz * (zz > 0.0f));
 
-
-#endif
+	return thicknessSquared / (tx*tx + ty*ty + sz*sz + IMP_MIN_DIVISOR);
+}

@@ -19,30 +19,22 @@
  */
 
 
-#ifndef IMPCRAWLPOINT_H
-#define IMPCRAWLPOINT_H
+#ifndef IMPHEXAHEDRON_H
+#define IMPHEXAHEDRON_H
 
 
 
-#include <vector>
+#include "impShape.h"
 
 
 
-// For making a list of starting points for surface crawling.
-class impCrawlPoint{
+// An impHexahedron is a simpe cube if the matrix has no nonuniform scale factor
+class impHexahedron : public impShape{
 public:
-    float position[3];
-    
-    impCrawlPoint(){};
-    impCrawlPoint(float x, float y, float z){position[0] = x; position[1] = y; position[2] = z;};
-    impCrawlPoint(float* p){position[0] = p[0]; position[1] = p[1]; position[2] = p[2];};
-	~impCrawlPoint(){};
-	void set(float x, float y, float z){position[0] = x; position[1] = y; position[2] = z;};
-    void set(float* p){position[0] = p[0]; position[1] = p[1]; position[2] = p[2];};
+	impHexahedron(){};
+	~impHexahedron(){};
+	virtual float value(float* position);
 };
-
-
-typedef std::vector<impCrawlPoint> impCrawlPointVector;
 
 
 

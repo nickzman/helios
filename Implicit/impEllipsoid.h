@@ -19,30 +19,22 @@
  */
 
 
-#ifndef IMPCRAWLPOINT_H
-#define IMPCRAWLPOINT_H
+#ifndef IMPELLIPSOID_H
+#define IMPELLIPSOID_H
 
 
 
-#include <vector>
+#include "impShape.h"
 
 
 
-// For making a list of starting points for surface crawling.
-class impCrawlPoint{
+class impEllipsoid : public impShape{
 public:
-    float position[3];
+    impEllipsoid(){};
+    ~impEllipsoid(){};
     
-    impCrawlPoint(){};
-    impCrawlPoint(float x, float y, float z){position[0] = x; position[1] = y; position[2] = z;};
-    impCrawlPoint(float* p){position[0] = p[0]; position[1] = p[1]; position[2] = p[2];};
-	~impCrawlPoint(){};
-	void set(float x, float y, float z){position[0] = x; position[1] = y; position[2] = z;};
-    void set(float* p){position[0] = p[0]; position[1] = p[1]; position[2] = p[2];};
+    virtual float value(float* position);
 };
-
-
-typedef std::vector<impCrawlPoint> impCrawlPointVector;
 
 
 
