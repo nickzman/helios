@@ -52,6 +52,7 @@
 		E0157564247DB3FC00840367 /* HeliosView.h in Headers */ = {isa = PBXBuildFile; fileRef = 01528F51007D13077F000001 /* HeliosView.h */; };
 		E0157565247DB3FF00840367 /* HeliosView.mm in Sources */ = {isa = PBXBuildFile; fileRef = F5F14197033A929801A80102 /* HeliosView.mm */; };
 		E0157568247DB45B00840367 /* rsTimer.h in Headers */ = {isa = PBXBuildFile; fileRef = E0157567247DB45B00840367 /* rsTimer.h */; };
+		E08259C02482CE0900CD3F52 /* thumbnail.png in Resources */ = {isa = PBXBuildFile; fileRef = E08259BF2482CE0900CD3F52 /* thumbnail.png */; };
 		E0D079D00996912E00B2C3F4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F5F141D2033A92FE01A80102 /* Localizable.strings */; };
 		E0D079D10996912E00B2C3F4 /* spheremap.tga in Resources */ = {isa = PBXBuildFile; fileRef = F5F141DC033A93E701A80102 /* spheremap.tga */; };
 		E0D079D20996912E00B2C3F4 /* aaron_map.tga in Resources */ = {isa = PBXBuildFile; fileRef = A13524D903E6055600A80102 /* aaron_map.tga */; };
@@ -113,6 +114,7 @@
 		E015755D247D779100840367 /* Helios.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Helios.h; sourceTree = "<group>"; };
 		E0157562247DB3EA00840367 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/Helios.xib; sourceTree = "<group>"; };
 		E0157567247DB45B00840367 /* rsTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rsTimer.h; sourceTree = "<group>"; };
+		E08259BF2482CE0900CD3F52 /* thumbnail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = thumbnail.png; sourceTree = "<group>"; };
 		E0D079E10996912E00B2C3F4 /* Info-Helios.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-Helios.plist"; sourceTree = "<group>"; };
 		E0D079E20996912E00B2C3F4 /* Helios.saver */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Helios.saver; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5F14197033A929801A80102 /* HeliosView.mm */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.objcpp; path = HeliosView.mm; sourceTree = "<group>"; };
@@ -257,6 +259,7 @@
 				F5F141D2033A92FE01A80102 /* Localizable.strings */,
 				F5F141DC033A93E701A80102 /* spheremap.tga */,
 				A13524D903E6055600A80102 /* aaron_map.tga */,
+				E08259BF2482CE0900CD3F52 /* thumbnail.png */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -358,6 +361,7 @@
 				E0D079D10996912E00B2C3F4 /* spheremap.tga in Resources */,
 				E0D079D20996912E00B2C3F4 /* aaron_map.tga in Resources */,
 				E0157561247DB3EA00840367 /* Helios.xib in Resources */,
+				E08259C02482CE0900CD3F52 /* thumbnail.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
