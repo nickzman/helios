@@ -16,11 +16,3 @@
 "Default values" = "Valori di default";
 "Cancel" = "Cancella";
 "Save" = "Salva";
-
-/* version checking strings. */
-"Couldn't connect to version database, sorry" = "Non posso connettermi al database, peccato";
-"New version available !!" = "C'è una nuova versione !!";
-"You're up-to-date" = "Hai già l'ultima versione";
-
-
-

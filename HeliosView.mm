@@ -95,7 +95,6 @@ typedef struct				// Create A Structure
 				// par.dWireframe = [defaults boolForKey:@"dWireframe"];
 				settings.dBlur = int([defaults integerForKey:@"dBlur"]);
 				sphereType = int([defaults integerForKey:@"sphereType"]);
-				complexity = int([defaults integerForKey:@"complexity"]);
 			}
 			
 			NSRect newBounds = [_view convertRectToBacking:_view.bounds];
@@ -258,8 +257,6 @@ typedef struct				// Create A Structure
     
     [IBversionNumberField setStringValue:kVersion];
 
-    [IBUpdatesInfo setStringValue:@""];
-
     [IBmainMonitorOnly setState:(mainMonitorOnly ? NSOnState : NSOffState)];
 
         
@@ -299,10 +296,6 @@ typedef struct				// Create A Structure
     
     [IBsphereType selectItemAtIndex:sphereType];
     [IBsphereType setEnabled:settings.dSurface];
-
-    [IBcomplexity setIntValue:complexity];
-    [IBcomplexityTxt setStringValue:[NSString stringWithFormat:
-        [thisBundle localizedStringForKey:@"Complexity (%d)" value:@"" table:@""], complexity]];
 
     [IBmainMonitorOnly setTitle:[thisBundle localizedStringForKey:@"Main monitor only" value:@"" table:@""]];
     [IBDefaultValues setTitle:[thisBundle localizedStringForKey:@"Default values" value:@"" table:@""]];
@@ -360,11 +353,6 @@ typedef struct				// Create A Structure
         fooBool = ( [IBdSurface state] == NSOnState ) ? true : false;
         [IBsphereType setEnabled:fooBool];
     }
-    else if( sender == IBcomplexity ) {
-        fooInt = [IBcomplexity intValue];
-        [IBcomplexityTxt setStringValue:[NSString stringWithFormat:
-            [thisBundle localizedStringForKey:@"Complexity (%d)" value:@"" table:@""], fooInt]];
-    }
 }
 
 - (IBAction) closeSheet_save:(id) sender {
@@ -393,7 +381,6 @@ typedef struct				// Create A Structure
     // par.dWireframe = ( [IBdWireframe state] == NSOnState ) ? true : false;
     settings.dBlur = [IBdBlur intValue];
     sphereType = int([IBsphereType indexOfSelectedItem]);
-    complexity = [IBcomplexity intValue];
 
     
     [defaults setBool: mainMonitorOnly forKey: @"mainMonitorOnly"];
@@ -407,7 +394,6 @@ typedef struct				// Create A Structure
     [defaults setBool: settings.dSurface forKey: @"dSurface"];
     [defaults setInteger: settings.dBlur forKey: @"dBlur"];
     [defaults setInteger: sphereType forKey: @"sphereType"];
-    [defaults setInteger: complexity forKey: @"complexity"];
     
     [defaults synchronize];
 
@@ -477,10 +463,6 @@ typedef struct				// Create A Structure
     [IBsphereType selectItem:nil];
     [IBsphereType selectItemAtIndex:0];
 	[IBsphereType setEnabled:[IBdSurface state] == NSOnState];
-    
-    [IBcomplexity setIntValue:0];
-    [IBcomplexityTxt setStringValue:[NSString stringWithFormat:
-        [thisBundle localizedStringForKey:@"Complexity (%d)" value:@"" table:@""], 0]];
 }
 
 

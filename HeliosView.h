@@ -26,11 +26,7 @@
 	
 	HeliosSaverSettings settings;
 	rsTimer timer;
-	int complexity;
 	int sphereType;
-
-    IBOutlet id IBcomplexity;
-    IBOutlet id IBcomplexityTxt;
 
     IBOutlet id IBdIons;
     IBOutlet id IBdIonsTxt;
@@ -61,7 +57,6 @@
     
     IBOutlet id configureSheet;
     IBOutlet id IBversionNumberField;
-    IBOutlet id IBUpdatesInfo;
     IBOutlet id IBmainMonitorOnly;
 
     IBOutlet id IBDefaultValues;
